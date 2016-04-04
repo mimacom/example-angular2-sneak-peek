@@ -1,5 +1,6 @@
 import {Component} from "angular2/core";
 import {Hero} from "./hero";
+import {HeroDetailComponent} from "./hero-detail.component";
 
 let HEROES:Hero[] = [
     {"id": 11, "name": "Mr. Nice"},
@@ -17,7 +18,8 @@ let HEROES:Hero[] = [
 @Component({
     selector: 'app',
     styles: [require('./app.component.scss')],
-    template: require('./app.component.html')
+    template: require('./app.component.html'),
+    directives: [HeroDetailComponent]
 })
 export class AppComponent {
 
