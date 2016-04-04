@@ -1,5 +1,7 @@
-### Installation
-**Make sure you have node version >= 4.0 - https://nodejs.org**
+### Requirements
+  * git
+  * node (version >= 4.0), npm
+  * some editor
 
 ### Quick start
 ```bash
