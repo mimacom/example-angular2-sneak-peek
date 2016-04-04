@@ -1,0 +1,44 @@
+html, body, .viewport {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.vbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.hbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+article {
+  flex: 5;
+}
+
+aside, nav {
+  flex: 1;
+}
+
+header, footer {
+  height: 50px;
+  background-color: #f5f5f5;
+}
+
+footer {
+  .container .text-muted {
+    margin: 15px 0;
+  }
+}
+
+main {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
