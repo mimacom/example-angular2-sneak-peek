@@ -1,4 +1,6 @@
 ### Requirements
+
+[![Join the chat at https://gitter.im/mimacom/angular2-sneak-peek](https://badges.gitter.im/mimacom/angular2-sneak-peek.svg)](https://gitter.im/mimacom/angular2-sneak-peek?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
   * git
   * node (version >= 4.0), npm
   * some editor
