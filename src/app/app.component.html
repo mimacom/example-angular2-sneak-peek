@@ -1,1 +1,12 @@
-<h1 class="title">Hello from Angular 2 Sneak Peek</h1>
+<h1 class="title">{{title}}</h1>
+<h2>{{hero.name}} details!</h2>
+<div>
+  <label>Id: </label>{{hero.id}}
+</div>
+<div>
+  <label>Name: </label>{{hero.name}}
+</div>
+<div>
+    <label>Name:</label>
+    <input [(ngModel)]="hero.name" placeholder="name"/>
+</div>
