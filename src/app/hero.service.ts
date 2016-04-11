@@ -12,4 +12,8 @@ export class HeroService {
     getHero(id:number):Promise<Hero> {
         return Promise.resolve(HEROES.filter((hero) => hero.id === id)[0]);
     }
+
+    removeHero(hero:Hero):void {
+        HEROES.splice(HEROES.indexOf(hero), 1);
+    }
 }

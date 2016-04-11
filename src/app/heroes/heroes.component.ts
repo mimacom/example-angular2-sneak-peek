@@ -36,4 +36,10 @@ export class HeroesComponent implements OnInit {
         let link = ['HeroDetail', {id: this.selectedHero.id}];
         this._router.navigate(link);
     }
+
+    public removeHero(hero:Hero) {
+        if (confirm(`Do you reallny want to remove hero ${hero.name}?`)) {
+            this._heroService.removeHero(hero);
+        }
+    }
 }
