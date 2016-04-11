@@ -38,7 +38,7 @@ export class HeroesComponent implements OnInit {
     }
 
     public removeHero(hero:Hero) {
-        if (confirm(`Do you reallny want to remove hero ${hero.name}?`)) {
+        if (confirm(`Do you really want to remove hero ${hero.name}?`)) {
             this._heroService.removeHero(hero);
         }
     }
