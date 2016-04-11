@@ -18,6 +18,12 @@ export class HeroesComponent implements OnInit {
     constructor(private _heroService:HeroService, private _router:Router) {
     }
 
+    public removeHero(hero:Hero) {
+        if (confirm(`Do you reallny want to remove hero ${hero.name}?`)) {
+            this.heroes.splice(this.heroes.indexOf(hero), 1);
+        }
+    }
+    
     public onSelect(hero:Hero) {
         this.selectedHero = hero;
     }

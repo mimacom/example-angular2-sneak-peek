@@ -1,6 +1,7 @@
 <h2>My Heroes</h2>
 <div class="list-group">
   <a class="list-group-item" *ngFor="#hero of heroes" (click)="onSelect(hero)" [class.active]="hero === selectedHero">
+    <span (click)="removeHero(hero)" class="btn btn-danger btn-sm pull-right">remove</span>
     <span class="badge">{{hero.id}}</span>{{hero.name}}
   </a>
 </div>
