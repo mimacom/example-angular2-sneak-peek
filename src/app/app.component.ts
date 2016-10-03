@@ -1,6 +1,5 @@
 import {Component} from "@angular/core";
 import {Hero} from "./hero";
-import {HeroDetailComponent} from "./hero-detail.component";
 import "../style/main.scss";
 
 const HEROES: Hero[] = [
@@ -19,8 +18,7 @@ const HEROES: Hero[] = [
 @Component({
     selector: 'app',
     styles: [require('./app.component.scss')],
-    template: require('./app.component.html'),
-    directives: [HeroDetailComponent]
+    template: require('./app.component.html')
 })
 export class AppComponent {
 
