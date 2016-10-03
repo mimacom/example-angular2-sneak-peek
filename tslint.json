@@ -39,7 +39,8 @@
       true,
       "check-decl",
       "check-operator",
-      "check-separator"
+      "check-separator",
+      "check-type"
     ]
   }
 }
