@@ -1,8 +1,9 @@
-import {Component} from "angular2/core";
+import {Component} from "@angular/core";
 import {Hero} from "./hero";
 import {HeroDetailComponent} from "./hero-detail.component";
+import "../style/main.scss";
 
-let HEROES:Hero[] = [
+const HEROES: Hero[] = [
     {"id": 11, "name": "Mr. Nice"},
     {"id": 12, "name": "Narco"},
     {"id": 13, "name": "Bombasto"},
@@ -23,11 +24,11 @@ let HEROES:Hero[] = [
 })
 export class AppComponent {
 
-    public title:string = 'Tour of Heroes';
-    public selectedHero:Hero;
-    public heroes:Hero[] = HEROES;
+    public title: string = 'Tour of Heroes';
+    public selectedHero: Hero;
+    public heroes: Hero[] = HEROES;
 
-    public onSelect(hero:Hero) {
+    public onSelect(hero: Hero) {
         this.selectedHero = hero;
     }
 }

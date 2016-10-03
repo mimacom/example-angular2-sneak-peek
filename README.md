@@ -24,34 +24,30 @@ go to [http://localhost:8080](http://localhost:8080) in your browser.
 ### File Structure
 ```
 angular2-sneak-peek
-│   .editorconfig
-│   .gitignore
-│   package.json
-│   README.md
-│   tsconfig.json
-│   tslint.json
-│   typedoc.json
-│   typings.json
-│   webpack.config.js
-│
-└───src
-    │   bootstrap.ts
-    │   vendor.ts
-    │
-    ├───app
-    │       app.html
-    │       app.scss
-    │       app.component.ts
-    │
-    ├───public
-    │   │   index.html
-    │   │
-    │   └───img
-    ├───shims
-    │       shims_for_IE.js
-    │
-    └───style
-            main.scss
+├── config
+│   ├── helpers.js
+│   ├── webpack.common.js
+│   ├── webpack.dev.js
+│   └── webpack.prod.js
+├── src
+│   ├── app
+│   │   ├── app.component.html
+│   │   ├── app.component.scss
+│   │   ├── app.component.ts
+│   │   └── app.module.ts
+│   ├── style
+│   │   └── main.scss
+│   ├── index.html
+│   ├── main.ts
+│   ├── polyfills.ts
+│   └── vendor.ts
+├── package.json
+├── README.md
+├── tsconfig.json
+├── tslint.json
+├── typedoc.json
+├── typings.json
+└── webpack.config.js
 ```
 
 # License
