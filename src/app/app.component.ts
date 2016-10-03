@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
-import "../style/main.scss";
 import {Hero} from "./hero";
+import "../style/main.scss";
 
 const HEROES: Hero[] = [
     {"id": 11, "name": "Mr. Nice"},
