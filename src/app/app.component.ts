@@ -9,6 +9,6 @@ import "../style/main.scss";
 })
 export class AppComponent {
 
-    public title:string = 'Tour of Heroes';
-    public hero:Hero = new Hero(1, 'Spiderman');
+    public title: string = 'Tour of Heroes';
+    public hero: Hero = new Hero(1, 'Spiderman');
 }
