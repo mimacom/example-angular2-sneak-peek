@@ -2,7 +2,7 @@ import {Component} from "@angular/core";
 import {Hero} from "./hero";
 import "../style/main.scss";
 
-let HEROES:Hero[] = [
+let HEROES: Hero[] = [
     {"id": 11, "name": "Mr. Nice"},
     {"id": 12, "name": "Narco"},
     {"id": 13, "name": "Bombasto"},
