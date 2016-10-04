@@ -1,7 +1,8 @@
-import {Component, OnInit, Input} from "angular2/core";
+import {Component, OnInit, Input} from "@angular/core";
+import {ActivatedRoute, Params} from "@angular/router";
+import {Location} from "@angular/common";
+import {HeroService} from "./../hero.service";
 import {Hero} from "./../hero";
-import {HeroService} from "./../hero.service.ts";
-import {RouteParams} from "angular2/router";
 
 @Component({
     selector: 'hero-detail',
@@ -10,19 +11,22 @@ import {RouteParams} from "angular2/router";
 export class HeroDetailComponent implements OnInit {
 
     @Input()
-    public hero:Hero;
+    public hero: Hero;
 
-    constructor(private _heroService:HeroService, private _routeParams:RouteParams) {
+    constructor(private heroService: HeroService,
+                private route: ActivatedRoute,
+                private location: Location) {
     }
 
-    public ngOnInit():any {
-        let id:number = Number(this._routeParams.get('id'));
-        this._heroService.getHero(id).then((hero:Hero) => {
-            this.hero = hero;
+    public ngOnInit(): any {
+        this.route.params.forEach((params: Params) => {
+            let id = Number(params['id']);
+            this.heroService.getHero(id)
+                .then(hero => this.hero = hero);
         });
     }
 
-    public onBack() {
-        window.history.back();
+    public goBack() {
+        this.location.back();
     }
 }

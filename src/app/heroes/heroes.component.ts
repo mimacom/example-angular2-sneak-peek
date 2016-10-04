@@ -1,39 +1,34 @@
-import {Component, OnInit} from "angular2/core";
+import {Component, OnInit} from "@angular/core";
+import {Router} from "@angular/router";
 import {Hero} from "./../hero";
-import {HeroDetailComponent} from "./../hero-detail/hero-detail.component.ts";
-import {HeroService} from "./../hero.service.ts";
-import {Router} from "angular2/router";
+import {HeroService} from "./../hero.service";
 
 @Component({
     selector: 'heroes',
     styles: [require('./heroes.component.scss')],
-    template: require('./heroes.component.html'),
-    directives: [HeroDetailComponent]
+    template: require('./heroes.component.html')
 })
 export class HeroesComponent implements OnInit {
 
-    public selectedHero:Hero;
-    public heroes:Hero[];
+    public selectedHero: Hero;
+    public heroes: Hero[];
 
-    constructor(private _heroService:HeroService, private _router:Router) {
+    constructor(private heroService: HeroService, private router: Router) {
     }
 
-    public onSelect(hero:Hero) {
+    public onSelect(hero: Hero) {
         this.selectedHero = hero;
     }
 
-    public getHeroes():void {
-        this._heroService.getHeroes().then((heroes:Hero[]) => {
-            this.heroes = heroes;
-        });
+    public getHeroes(): void {
+        this.heroService.getHeroes().then(heroes => this.heroes = heroes);
     }
 
-    public ngOnInit():any {
+    public ngOnInit(): void {
         this.getHeroes();
     }
 
-    public goToDetail():void {
-        let link = ['HeroDetail', {id: this.selectedHero.id}];
-        this._router.navigate(link);
+    public goToDetail(): void {
+        this.router.navigate(['/detail', this.selectedHero.id]);
     }
 }
