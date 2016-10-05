@@ -11,14 +11,14 @@ import "../style/main.scss";
 })
 export class AppComponent implements OnInit {
 
-    public title: string = 'Tour of Heroes';
-    public selectedHero: Hero;
-    public heroes: Hero[];
+    title = 'Tour of Heroes';
+    selectedHero: Hero;
+    heroes: Hero[];
 
     constructor(private heroService: HeroService) {
     }
 
-    public onSelect(hero: Hero) {
+    public onSelect(hero: Hero): void {
         this.selectedHero = hero;
     }
 
