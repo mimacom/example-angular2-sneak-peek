@@ -22,11 +22,11 @@ const HEROES: Hero[] = [
 })
 export class AppComponent {
 
-    public title: string = 'Tour of Heroes';
-    public selectedHero: Hero;
-    public heroes: Hero[] = HEROES;
+    title = 'Tour of Heroes';
+    selectedHero: Hero;
+    heroes = HEROES;
 
-    public onSelect(hero: Hero) {
+    public onSelect(hero: Hero): void {
         this.selectedHero = hero;
     }
 }
