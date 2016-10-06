@@ -8,5 +8,5 @@ import "../style/main.scss";
 })
 export class AppComponent {
 
-    public title: string = 'Tour of Heroes';
+    title = 'Tour of Heroes';
 }
