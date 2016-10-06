@@ -3,7 +3,7 @@
 
   * git
   * node (version >= 4.0), npm
-  * some editor
+  * text editor or IDE (webstorm highly recommended)
 
 ### Quick start
 ```bash
@@ -19,7 +19,7 @@ $ npm install
 # start the server
 $ npm start
 ```
-go to [http://localhost:8080](http://localhost:8080) in your browser.
+open [http://localhost:8080](http://localhost:8080) in your browser.
 
 ### File Structure
 ```
