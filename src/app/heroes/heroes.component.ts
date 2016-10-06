@@ -10,8 +10,8 @@ import {HeroService} from "./../hero.service";
 })
 export class HeroesComponent implements OnInit {
 
-    public selectedHero: Hero;
-    public heroes: Hero[];
+    selectedHero: Hero;
+    heroes: Hero[];
 
     constructor(private heroService: HeroService, private router: Router) {
     }

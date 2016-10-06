@@ -8,16 +8,16 @@ import {HeroService} from "./../hero.service";
     template: require('./dashboard.component.html')
 })
 export class DashboardComponent implements OnInit {
-    public heroes: Hero[];
+    heroes: Hero[];
 
     constructor(private heroService: HeroService, private router: Router) {
     }
 
-    public ngOnInit(): void {
+    ngOnInit(): void {
         this.heroService.getHeroes().then(heroes => this.heroes = heroes.slice(1, 5));
     }
 
-    public goToDetail(hero: Hero): void {
+    goToDetail(hero: Hero): void {
         this.router.navigate(['/detail', hero.id]);
     }
 }
