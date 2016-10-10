@@ -3,7 +3,7 @@ import {Hero} from "./hero";
 
 @Component({
     selector: 'hero-detail',
-    template: require('./hero-detail.component.html')
+    templateUrl: './hero-detail.component.html'
 })
 export class HeroDetailComponent {
 
