@@ -5,8 +5,8 @@ import "../style/main.scss";
 
 @Component({
     selector: 'app',
-    styles: [require('./app.component.scss')],
-    template: require('./app.component.html'),
+    styleUrls: ['./app.component.scss'],
+    templateUrl: './app.component.html',
     providers: [HeroService]
 })
 export class AppComponent implements OnInit {
